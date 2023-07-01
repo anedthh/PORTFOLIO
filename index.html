@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="./css/portcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- AOD 스크롤애니메이션링크 -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOD 스크롤애니메이션링크 끝 -->
+
+<script src="./three.js-master/build/three.min.js"></script>
+<script src="./js/jScrollability.min.js"></script>
+<script src="./js/jScrollability.js"></script>
+    <script src="./js/main.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+
+<script>
+
+
+
+
+function getSectionPoint() {
+    const section = document.querySelector('.s6')
+    const sections = document.querySelectorAll('.s7_web');
+    const thisPoint = document.documentElement.scrollTop;
+
+    for (let i = 0; i < sections.length; i++) {
+        let number = 250; //margin-bottom
+
+        if (thisPoint >= (section.offsetTop + sections[0].offsetTop) && thisPoint <= (section.offsetTop + section.clientHeight)) {
+
+            let point = sections[0].offsetTop + Math.abs(sections[0].getBoundingClientRect().top);
+            const num = document.querySelectorAll('.num');
+
+            // console.log(sections[0].getBoundingClientRect().top);
+            // console.log("sections.offsetTop : " + sections[0].offsetTop);
+
+            if ((sections[i].offsetTop - number) <= point) {
+                if (Number(num[i].textContent) > 1) {
+                    sections[i - 1].classList.remove('active');
+                    sections[i].classList.add('active');
+                } else {
+                    sections[i].classList.add('active');
+                }
+            } else {
+                sections[i].classList.remove('active');
+            }
+        }
+    }
+}
+
+
+</script>
+
+
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        canvas:focus {
+            outline: 0;
+            border: 0;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+    
+
+    <div class="side_bar">
+
+        <!-- <div class="burger">
+            <a class="menu-trigger" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+        </div> -->
+        
+        <P class="side_bar_txt">Kang Da Yooun PORTFOLIO</P>
+    </div>
+
+
+<div class="pf_line1400">
+        <div class="pf_line50"></div>
+</div>
+
+
+
+
+<div class="s2">
+    <div class="s3_web">
+        <div class="s5_web_img">  
+                <img src="img/s5_uiux.png" data-aos="fade-down" data-aos-duration="1500">
+        
+        </div>
+        <div class="s3_web_txt" data-aos="fade-up" data-aos-duration="1500">
+            <p>UI UX</p>
+            <p>Design</p>
+            <div class="view_btn">
+                <a href="https://anedthh.myportfolio.com/work-1" class="view_btn_right" target="_blank">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- <div class="s1">
+    <div class="s1_web">
+        
+       <div class="s1_web_txt">
+           <p>  Web</br>Design</p>
+            <div class="view_btn">
+                <a href="">
+                    <p>View More</p>
+                </a>
+            </div>
+       </div>
+
+       <div class="s1_web_img">
+            <div class="s1_web_imgtablet"><img src="img/s1_tablet.png"></div>
+            <div class="s1_web_imgmobile"><img src="img/s1_mobile.png"></div>
+            
+            <div class="s1_web_imgpc"><img src="img/s1_pc.png"></div> 
+       </div>
+
+    </div>
+</div> -->
+
+
+<div class="s2">
+
+    <div class="s2_web">  
+       <div class="s2_web_txt" data-aos="fade-up" data-aos-duration="1500">
+           <p>Web</p>
+           <p>Design</p>
+            <div class="view_btn">
+                <a href="https://anedthh.myportfolio.com/work" target="_blank">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+       </div>
+    </div>
+
+    <div class="s2_web_img">
+        <div class="s2_web_imgtablet" data-aos="fade-down" data-aos-duration="1000"><img src="img/s1_tablet.png"></div>
+        <div class="s2_web_imgmobile" data-aos="fade-down" data-aos-duration="1000"><img src="img/s1_mobile.png"></div>
+        <div class="s2_web_imgpc" data-aos="fade-up" data-aos-duration="1000"><img src="img/s1_pc.png"></div> 
+        <div class="s2_web_s1_tm"><img src="img/s1_tm.png"></div> 
+    </div>
+    <!-- <div class="s2_bgtxt section-1">
+        <p class="slide-in-demo">79FOUNYARD 79FOUNYARD 79FOUNYARD 79FOUNYARD 79FOUNYARD </p>
+    </div> -->
+    
+</div>
+
+
+
+<!-- 
+<div class="s2">
+    <div class="s3_web">
+        <div class="s5_web_img">  
+                <img src="img/s5_mobile.png" data-aos="fade-down" data-aos-duration="1500">
+                <img src="img/s5_tablet.png" data-aos="fade-up" data-aos-duration="1500">
+                <img src="img/s5_tm.png" data-aos-duration="1500">
+        </div>
+        <div class="s3_web_txt" data-aos="fade-up" data-aos-duration="1500">
+            <p>UI UX</p>
+            <p>Design</p>
+            <div class="view_btn">
+                <a href="" class="view_btn_right">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+
+
+
+<div class="s2">
+    <div class="s3_web">
+        <div class="s3_web_img">
+                <canvas id="c"></canvas>
+                <img src="img/s3_yellcan.png" data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+        </div>
+        <div class="s3_web_txt" data-aos="fade-up" data-aos-duration="1500">
+            <p>Contents</p>
+            <p>Design</p>
+            <div class="view_btn">
+                <a href="https://anedthh.myportfolio.com/ui-ux" class="view_btn_right" target="_blank">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="s2_bgtxt">
+        <p>79FOUNYARD </p>
+        <p>79FOUNYARD </p>
+        <p>79FOUNYARD </p>
+        <p>79FOUNYARD </p>
+    </div> -->
+    <!-- <div class="s2_bgtxt section-1">
+        <p class="slide-in-demo">79FOUNYARD 79FOUNYARD 79FOUNYARD 79FOUNYARD 79FOUNYARD </p>
+    </div> -->
+
+</div>
+
+<!-- 
+<div class="s4" >
+
+    <div class="s4_web">  
+       <div class="s4_web_txt" data-aos="fade-up" data-aos-duration="1500">
+           <p>Editorial</p>
+           <p>Design</p>
+             <div class="view_btn">
+                <a href="">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+       </div>
+    </div>
+
+    <div class="s4_web_img">
+         -->
+        <!-- <div class="s4_web_img2"><img src="img/s4_reaflet.png"></div>  -->
+    <!-- </div>
+</div> -->
+
+<!-- 
+<div class="s2">
+    <div class="s3_web">
+        <div class="s5_web_img">  
+                <img src="img/s5_mobile.png" data-aos="fade-down" data-aos-duration="1500">
+                <img src="img/s5_tablet.png" data-aos="fade-up" data-aos-duration="1500">
+                <img src="img/s5_tm.png" data-aos-duration="1500">
+        </div>
+        <div class="s3_web_txt" data-aos="fade-up" data-aos-duration="1500">
+            <p>Other</p>
+            <p>Design</p>
+            <div class="view_btn">
+                <a href="" class="view_btn_right">
+                    <p>View More</p>
+                    <div class="view_btn_icon">
+                        <img src="img/viewmore_img.png">
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+
+
+<div class="s6 no_sticky">
+    <div class="s6_web">
+
+        <div class="s6_txt">
+            <p data-aos="fade-up" data-aos-duration="1500">I CAN <span>D</span>O</p>
+            <div class="s6_txt_bm" data-aos="fade-up" data-aos-duration="1800">
+                <p>
+                    <b>디자이너</b>지만 웹 기획, 코딩에 대한 공부도 꾸준히 하고있습니다.</br>
+                    새로운 것에 있어서는 늘 배우려는 자세로 받아들일 준비가 되어있어</br>
+                    새로운 프로그램 툴도 <b>금방 적응할 수 있는 능력</b>을 지녔습니다.
+                </p>
+            </div>
+        </div>
+
+        <div class="s6_icon">
+            <img src="img/s6_icon1.png" alt="포토샵 아이콘" tilte="포토샵" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/s6_icon2.png" alt="일러스트레이터 아이콘" tilte="일러스트레이터" data-aos="fade-up" data-aos-duration="1100">
+            <img src="img/s6_icon3.png" alt="프리미어 프로 아이콘" tilte="프리미어 프로" data-aos="fade-up" data-aos-duration="1200">
+            <img src="img/s6_icon4.png" alt="애프터 이펙트 아이콘" tilte="애프터 이펙트" data-aos="fade-up" data-aos-duration="1300">
+            <img src="img/s6_icon5.png" alt="HTML5 아이콘" tilte="HTML5" data-aos="fade-up" data-aos-duration="1400">
+            <img src="img/s6_icon6.png" alt="CSS3 아이콘" tilte="CSS3" data-aos="fade-up" data-aos-duration="1500">
+            <img src="img/s6_icon7.png" alt="비주얼스튜디오 코드 아이콘" tilte="비주얼스튜디오 코드" data-aos="fade-up" data-aos-duration="1600">
+            <img src="img/s6_icon8.png" alt="피그마 아이콘" tilte="피그마" data-aos="fade-up" data-aos-duration="1700">
+            <img src="img/s6_icon10.png" alt="블렌더 아이콘" tilte="블렌더" data-aos="fade-up" data-aos-duration="1900">
+            <img src="img/s6_icon9.png" alt="제이쿼리 아이콘" tilte="제이쿼리" data-aos="fade-up" data-aos-duration="2000">
+        </div>
+
+    </div>
+</div>
+
+
+<div class="s6 sticky_box">
+
+    <div class="s7_web">
+        <div class="s7_title">Education</div>
+        
+        <div class="s7_txt">
+            <p>2020.02</p>
+            <p>건국대학교 글로컬 캠퍼스 디자인대학 디자인학부 시각광고디자인전공 (미술학사) 졸업</p>
+        </div>
+        <div class="s7_txt">
+            <p>2015.03</p>
+            <p>건국대학교 글로컬 캠퍼스 디자인대학 디자인학부 시각광고디자인전공 (미술학사) 입학</p>
+        </div>
+        <!-- <div class="s7_txt">
+            <p>2018.06 - 2018.09</p>
+            <p>더조은컴퓨터아트학원</p>
+            <p>더조은컴퓨터아트학원 웹퍼블리셔 [HTML/CSS]수업 수강</p>
+        </div>
+        <div class="s7_txt">
+            <p>2022.05 - 2022.08</p>
+            <p>클래스101 3D블렌더 강의 수강</p>
+            <p>'현직 10년차 디자이너의 블렌더로 완성하는 3D 애니메이션'수업 수강</p>
+        </div> -->
+    </div>
+</div>   
+<div class="s6 sticky_box">
+    <div class="s7_web">
+        <div class="s7_title">Activity</div>
+       
+        <div class="s7_txt">
+            <p>2023.03</p>
+            <p>그래픽기술자격(GTQ) 1급</p>
+            <p>한국생산성본부(KPC)</p>
+        </div>
+        <div class="s7_txt">
+            <p>2019.12</p>
+            <p>Microsoft Office Specialist 2010 Excel</p>
+            <p>Microsoft Office</p>
+        </div>
+        <div class="s7_txt">
+            <p>2019.10</p>
+            <p>Microsoft Office Specialist 2010 Power Point</p>
+            <p>Microsoft Office</p>
+        </div>
+    </div>
+</div>
+<div class="s6 sticky_box">
+    <div class="s7_web">
+        <div class="s7_title">Working Experience</div>
+        <div class="s7_txt">
+            <p>2020.06~</p>
+            <p>DCM 디자인 에이전시</p>
+            <p>다양한 신규, 리뉴얼 앱/웹 UI UX디자인
+                한국상담학회, 파파도나스, 79파운야드, 대한곱창 등 기업 및 브랜드 유지 운영 디자인</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- <section class="section section-1">
+    <h3 class="slide-in-demo">Slide elements in</h3>
+</section> -->
+
+<div class="s8">
+    <div class="s8_web">
+        <div class="guide">
+            <p>Portfolio</p>
+            <a href=""><span>Portfolio 다운로드</span></a>
+            <a href="https://www.behance.net/anedthha643" target="_blank"><span>Behance</span></a>
+        </div>    
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="ft_email"> 
+        <a href="mailto:asthom@hanmail.net">
+            <p>E-mail</p>
+            <p>asthom@hanmail.net</p>
+        </a>
+    </div>
+ 
+    <div class="ft_sns">
+        <p>Follow me</p>
+        <a href="https://www.instagram.com/dadot.y/" target="_blank"><span> <img src="img/ft_insta.png"></span></a>
+        <!-- <a href=""><span></span></a> -->
+    </div>
+</div>
+
+
+
+
+
+    <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@0.120.0/build/three.module.js';
+        import {OrbitControls} from 'https://cdn.skypack.dev/three@0.120.0/examples/jsm/controls/OrbitControls.js';
+        import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.120.0/examples/jsm/loaders/GLTFLoader.js';
+
+        function main() {
+        const canvas = document.querySelector('#c');
+        const renderer = new THREE.WebGLRenderer({canvas,alpha:true});
+        const wrap = document.querySelector(".s3_web_img");
+        let root;
+        renderer.gammaOutput = true
+        renderer.setClearColor( new THREE.Color( 0xff0000 ) );
+        renderer.setClearAlpha( 0 );
+
+        canvas.style.width = wrap.clientWidth + "px";
+        canvas.style.height = wrap.clientWidth * 1.1327 + "px";
+
+        const fov = 45;
+        const aspect = 2;  // the canvas default
+        const near = 0.1;
+        const far = 100;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        camera.position.set(0, 10, 20);
+
+        const controls = new OrbitControls(camera, canvas);
+        controls.target.set(0, 5, 0);
+        controls.minPolarAngle = Math.PI/2;
+        controls.maxPolarAngle = Math.PI/2;
+        controls.enableZoom = false;
+        // controls.enableRotate = false;
+        controls.enablePan = false;
+        controls.update();
+
+        const scene = new THREE.Scene();
+        // scene.background = new THREE.Color('rgba(255,255,255,0)');
+
+        {
+            const color = 0xFFFFFF;
+            const intensity = 0.25;
+            const light = new THREE.DirectionalLight(color, intensity);
+            light.position.set(50, 50, 30);
+            scene.add(light);
+            scene.add(light.target);
+
+            //subtle red ambient light
+            const ambientLight = new THREE.AmbientLight(0xaaaaaa);
+            scene.add(ambientLight);
+        }
+
+        function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
+            const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
+            const halfFovY = THREE.MathUtils.degToRad(camera.fov * .5);
+            const distance = halfSizeToFitOnScreen / Math.tan(halfFovY);
+            // compute a unit vector that points in the direction the camera is now
+            // in the xz plane from the center of the box
+            const direction = (new THREE.Vector3())
+                .subVectors(camera.position, boxCenter)
+                .multiply(new THREE.Vector3(1, 0, 1))
+                .normalize();
+
+            // move the camera to a position distance units way from the center
+            // in whatever direction the camera was from the center already
+            camera.position.copy(direction.multiplyScalar(distance).add(boxCenter));
+
+            // pick some near and far values for the frustum that
+            // will contain the box.
+            camera.near = boxSize / 100;
+            camera.far = boxSize * 100;
+
+            camera.updateProjectionMatrix();
+
+            // point the camera to look at the center of the box
+            camera.lookAt(boxCenter.x, boxCenter.y, boxCenter.z);
+        }
+
+        {
+            const gltfLoader = new GLTFLoader();
+            gltfLoader.load('./models/79/79FOUNYARD_MINT.gltf', (gltf) => {
+                const root = gltf.scene;
+                //console.log(root);
+                root.children[0].material.metalness = 0;
+                root.rotation.z = 0.1;
+                scene.add(root);
+
+                // compute the box that contains all the stuff
+                // from root and below
+                const box = new THREE.Box3().setFromObject(root);
+
+                const boxSize = box.getSize(new THREE.Vector3()).length();
+                const boxCenter = box.getCenter(new THREE.Vector3());
+
+                // set the camera to frame the box
+                frameArea(boxSize * 0.9, boxSize, boxCenter, camera);
+
+                // update the Trackball controls to handle the new size
+                controls.maxDistance = boxSize * 10;
+                controls.target.copy(boxCenter);
+                controls.update();
+
+                let animationFrame;
+
+                function animate() {
+                    animationFrame = requestAnimationFrame( animate );
+                    root.rotation.y += 0.01;
+                    renderer.render( scene, camera );
+                }
+
+                function stopAnimate(){
+                    cancelAnimationFrame(animationFrame);
+                }
+
+                animate();
+
+                canvas.addEventListener("mouseenter",stopAnimate)
+                canvas.addEventListener("mouseleave",animate)
+            });
+        }
+
+        function resizeRendererToDisplaySize(renderer) {
+            const canvas = renderer.domElement;
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            if (needResize) {
+            renderer.setSize(width, height, false);
+            }
+            return needResize;
+        }
+
+        function render() {
+            if (resizeRendererToDisplaySize(renderer)) {
+                const canvas = renderer.domElement;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+
+            
+
+            renderer.render(scene, camera);
+
+            requestAnimationFrame(render);
+        }
+
+        requestAnimationFrame(render);
+
+        window.addEventListener("resize",function(){
+            camera.aspect = (wrap.clientWidth) / (wrap.clientWidth * 1.1327);
+            camera.updateProjectionMatrix();
+            renderer.setSize(wrap.clientWidth, (wrap.clientWidth * 1.1327));
+        })
+        }
+
+        main();
+
+        // s7 stikcy title  스크롤 시 컬러 채우기
+        window.addEventListener("scroll",function(){
+            document.querySelectorAll(".sticky_box .s7_title").forEach(function(el,idx){
+                if(el.getBoundingClientRect().top <= 0){
+                    el.classList.add("on")
+                }
+                else{
+                    el.classList.remove("on")
+                }
+            })
+        })
+
+
+        // 사이드메뉴바
+        $(function(){
+
+$("#slide-open").click(function(){
+    
+ if($("#burgur").hasClass('on')){
+ //메뉴버튼이 "on" 클래스를 포함할 경우 "on"클래스를 제거
+   $("#burgur").removeClass('on');
+   
+ }else{
+ //메뉴버튼이 "on" 클래스를 포함하지 않을 경우 "on"클래스를 추가
+   $("#burgur").addClass('on');
+   
+ }   
+ 
+});
+});
+
+
+
+AOS.init();
+
+
+// 텍스트 스크롤옆으로
+(function($) {
+    $(document).ready(function() {
+        $.jScrollability([
+            {
+                'selector': '.slide-in-demo',
+                'start': 'parent',
+                'end': 'parent',
+                'fn': {
+                    'left': {
+                        'start': 100,
+                        'end': 0,
+                        'unit': '%'
+                    }
+                }
+            }
+        ]);
+    });
+})(jQuery);
+
+
+    </script>
+
+
+</body>
+</html>
